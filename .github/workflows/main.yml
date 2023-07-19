@@ -1,0 +1,13 @@
+name: Handle Dispatched Event
+
+on:
+  repository_dispatch:
+    types:
+      - custom-event-type  # Match the custom event type used in Repository A
+
+jobs:
+  handle:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print a message
+        run: echo "Event dispatched from Repository A was received!"
